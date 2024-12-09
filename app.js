@@ -18,7 +18,7 @@ function hasPlayerWonTheRound(player, computer) {
   );
 }
 
-//get round result
+//get round result , doplnit na remizu
 
 let playerScore = 0;
 let computerScore = 0;
@@ -31,10 +31,13 @@ const getRoundResult = (playerOption) => {
   if (round === true) {
     playerScore++;
     return "player won";
+  }
+  if (playerOption === computerOption) {
+    return "it is a tie";
   } else {
     computerScore++;
     return "computer won";
   }
 };
 
-console.log(getRoundResult("noznice"));
+console.log(getRoundResult("rock"));
