@@ -26,13 +26,13 @@ let computerScore = 0;
 const getRoundResult = (playerOption) => {
   const computerOption = getComputerChoice();
 
-  const round = hasPlayerWonTheRound(playerOption, computerOption);
+  
 
-  if (round === true) {
+  if (hasPlayerWonTheRound(playerOption,computerOption)) {
     playerScore++;
     return "player won";
   }
-  if (playerOption === computerOption) {
+  else if (playerOption === computerOption) {
     return "it is a tie";
   } else {
     computerScore++;
@@ -40,4 +40,4 @@ const getRoundResult = (playerOption) => {
   }
 };
 
-console.log(getRoundResult("rock"));
+console.log(getRoundResult("paper"));
